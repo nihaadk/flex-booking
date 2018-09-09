@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flex Booking App</title>
 </head>
+
 <body>
     <div class="container">
         <header class="header">
-            Header part
+            <img src="img/logo.png" alt="logo" class="logo">
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="img/icons.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <nav class="user-nav">
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/icons.svg#icon-bookmark"></use>
+                    </svg>
+                    <span class="user-nav__notification">7</span>
+                </div>
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/icons.svg#icon-bubbles"></use>
+                    </svg>
+                    <span class="user-nav__notification">13</span>
+                </div>
+                <div class="user-nav-user">
+                    <img src="img/user-1.png" alt="user" class="user-nav__user-photo">
+                    <span class="user-nav__user-name">Bob</span>
+                </div>
+            </nav>
         </header>
         <div class="content">
             <nav class="sidebar">
@@ -23,4 +52,5 @@
         </div>
     </div>
 </body>
+
 </html>
