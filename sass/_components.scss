@@ -377,3 +377,66 @@
 
     }
 }
+
+// Review
+//####################
+.review {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+
+    &__text {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__photo {
+        height: 4.5rem;
+        width: 4.5rem;
+        margin-right: -6rem;
+    }
+
+    &__user-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__user-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__user-date {
+        font-size: 1rem;
+        color: var(--color-grey-dark-3);
+    }
+
+    &__rating {
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--color-primary);
+    }
+
+    &::before {
+        content: "\201D";
+        position: absolute;
+        top: -3rem;
+        right: 18rem;
+        font-size: 18rem;
+        font-family: sans-serif;
+        color: var(--color-grey-light-1);
+        z-index: 1;
+        
+    }
+}

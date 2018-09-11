@@ -92,7 +92,6 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  background-color: yellowgreen;
   flex: 1; }
 
 .logo {
@@ -328,3 +327,46 @@ body {
       margin-right: -1.4rem; }
   .recommend__count {
     margin-right: auto; }
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative; }
+  .review__text {
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative; }
+  .review__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-right: -6rem; }
+  .review__user-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .review__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .review__user-date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3); }
+  .review__rating {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--color-primary); }
+  .review::before {
+    content: "\201D";
+    position: absolute;
+    top: -3rem;
+    right: 18rem;
+    font-size: 18rem;
+    font-family: sans-serif;
+    color: var(--color-grey-light-1);
+    z-index: 1; }
