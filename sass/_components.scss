@@ -375,6 +375,10 @@
 
         &:not(:last-child) {
             margin-right: -1.4rem;
+
+            @media only screen and (max-width: $bp-largest) {
+                margin-right: -2rem;
+            }
         }
     }
 
