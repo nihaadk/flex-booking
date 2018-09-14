@@ -13,6 +13,12 @@
     flex: 0 0 40%;
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+    }
 
     &__input {
         font-family: inherit;
@@ -29,6 +35,10 @@
             outline: none;
             width: 100%;
             background-color: var(--color-grey-light-3);
+
+            @media only screen and (max-width: $bp-smallest) {
+               width: 90%;
+            }
         }
 
         &::-webkit-input-placeholder {
@@ -124,11 +134,24 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
         }
     }
 
@@ -168,6 +191,17 @@
 
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
+        
     }
 
     &__link:hover {
@@ -178,6 +212,14 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor; // use the current Color of the element. For example _icon ==> color is blue then is the color of SVG blue
+        
+        @media only screen and (max-width: $bp-small) {
+           margin-right: 0;
+           margin-bottom: 0.7rem;
+           width: 1.5rem;
+           height: 1.5rem;
+        }
+
     }
 }
 
@@ -189,6 +231,10 @@
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 // Gallery
@@ -215,6 +261,11 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+           font-size: 1.8rem;
+           padding: 1.25rem 2rem;
+        }
     }
 
     &__stars {
@@ -250,17 +301,28 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+        }
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $bp-small) {
+            
+        }
     }
 
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: .5rem;
+        }
     }
 }
 
@@ -344,15 +406,19 @@
         margin-right: .7rem;
 
         // older browsers
-        // background-image: url(../img/chevron-thin-right.svg);
-        // background-size: cover;
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
 
         // Newer browsers -- masks
-        background-color: var(--color-primary);
-        -webkit-mask-image:  url(../img/chevron-thin-right.svg);
-        -webkit-mask-size: cover;
-        mask-image:  url(../img/chevron-thin-right.svg);
-        mask-size: cover;
+        @supports((-webkit-mask-image: url()) or (mask-image: url())) {
+            background-color: var(--color-primary);
+            -webkit-mask-image:  url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image:  url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }
+        
     }
 
 }
@@ -387,7 +453,7 @@
     }
 
     &__friends {
-
+        display: flex;
     }
 }
 
@@ -400,6 +466,15 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -462,6 +537,10 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 1.5rem;
